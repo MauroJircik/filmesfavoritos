@@ -1,0 +1,139 @@
+/* Reset básico */
+* {
+    margin: 0;                                         /*margem da página*/
+    padding: 0;                                        /*espaço ao redor da margem da página*/
+    box-sizing: border-box;                            /*garantir que as tags filhas não saiam da tag pai*/
+}
+
+/*BODY*/
+body {
+    font-family: Arial, sans-serif;                    /*google fonts do corpo*/
+    background-color: #f8f8f8;                       /*cor do fundo do corpo*/
+    padding: 20px;                                     /*espaco ao redor*/
+}
+
+/*BODY: Cabecalho*/
+.cabecalho {
+    font-family: 'Montserrat', sans-serif;             /*google fonts do cabecalho*/
+    color: burlywood;                                /*cor da fonte*/
+    font-size: 1.5rem;                                 /*tamanho da fonte*/
+    font-weight: 800;                                  /*espessura da fonte*/
+    text-align: center;                                /*texto no centro sent horiz*/
+    padding: 1% 0;                                     /*espaco ao redor: vert horiz;*/
+    text-decoration: none;                             /*decoracao no texto*/
+}
+
+.apresentacao__bloco {
+    position: fixed;                                    /*posicionamento*/
+    top: 10px;                                          /*em cima*/
+    left: 10px;                                         /*esquerda*/
+    background-color: #e74c3c;                        /*cor do fundo*/
+    color: white;                                     /*cor da fonte*/
+    padding: 15px;                                      /*espaco ao redor*/
+    border-radius: 8px;                                 /*borda raio*/
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);         /*sombra*/
+    z-index: 1000;
+}
+
+.apresentacao__bloco a {
+    color: #ffeb3b;                                   /*cor da fonte*/
+    text-decoration: none;                              /*decoracao no texto*/
+}
+
+/* Main: perfil - avatar e acesso */
+.apresentacao__profile {
+    text-align: center;                                 /*alinhamento*/
+    margin-bottom: 40px;                                /*margem em baixo*/
+}
+
+.apresentacao__avatar {
+    width: 150px;                                       /*comprimento*/
+    height: 150px;                                      /*altura*/
+    border-radius: 50%;                                 /*borda raio*/
+    border: 5px solid #3498db;                        /*parametros da borda*/
+    margin-bottom: 10px;                                /*margem em baixo*/
+}
+
+.apresentacao__acesso {
+    display: flex;                                      /*define flexbox pai*/
+    justify-content: center;                            /*entre as divs*/
+    margin-top: 10px;                                   /*margem em cima*/
+}
+
+.apresentacao__acesso .organization {
+    background-color: #e74c3c;                        /*cor do fundo*/
+    color: white;                                     /*cor da fonte*/
+    padding: 5px 10px;                                  /*espaco ao redor: vert horiz;*/
+    margin-right: 10px;                                 /*margem direita*/
+    border-radius: 5px;                                 /*borda raio*/
+}
+
+.apresentacao__acesso .role {
+    background-color: #2ecc71;                        /*cor do fundo*/
+    color: white;                                     /*cor da fonte*/
+    padding: 5px 10px;                                  /*espaco ao redor: vert horiz;*/
+    border-radius: 5px;                                 /*borda raio*/
+}
+
+.apresentacao__filmes {
+    display: flex;                                     /*define flexbox pai*/
+    flex-wrap: wrap;
+    justify-content: space-around;                     /*espaco entre os filmes*/
+    gap: 20px;                                         /*distancia entre os blocos de elementos*/
+}
+
+.filme {
+    background-color: white;                         /*cor do fundo do filme*/
+    padding: 20px;                                     /*espaco ao redor*/
+    border-radius: 8px;                                /*borda raio*/
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);        /*sombra*/
+    width: 30%;                                        /*comprimento*/
+    min-width: 250px;
+    text-align: center;                                /*alinhamento*/
+}
+
+.filme h2 {
+    color: #e74c3c;                                 /*cor da fonte do título*/
+    margin-bottom: 10px;                              /*margem em baixo*/
+}
+
+.filme p {
+    font-size: 14px;                                  /*tamanho da fonte do texto*/
+    line-height: 1.6;                                 /*altura da linha*/
+}
+
+/*BODY: Footer*/
+.rodape {
+    background-color: gainsboro;                    /*cor do fundo do rodapé*/
+    font-family: "Montserrat", sans-serif;            /*google fonts do h2*/
+    color: black;                                   /*cor da fonte*/
+    font-size: 1.0rem;                                /*tamanho da fonte*/
+    font-weight: 400;                                 /*espessura da fonte*/
+    text-align: center;                               /*texto no centro sent horiz*/
+    border: none;                                     /*borda em torno do texto: espessura,tipo,cor*/
+    padding: 10px;                                    /*espaco ao redor: vert horiz;*/
+}
+
+/*Responsividade*/
+@media (max-width: 768px) {
+    .apresentacao__bloco {
+            position: relative;
+            top: auto;
+            left: auto;
+            width: auto;
+            margin-bottom: 20px;
+            text-align: center;
+    }
+
+    .apresentacao__filmes {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .filme {
+        width: 100%;
+        max-width: 500px;
+    }
+
+}
+
